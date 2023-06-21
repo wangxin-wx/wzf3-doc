@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a,O as o}from"./chunks/framework.95b9d657.js";const u=JSON.parse('{"title":"目录结构","description":"","frontmatter":{},"headers":[],"relativePath":"guide/tree.md","filePath":"guide/tree.md"}'),c={name:"guide/tree.md"},r=o("",6),n=[r];function p(s,i,d,l,_,m){return t(),a("div",null,n)}const f=e(c,[["render",p]]);export{u as __pageData,f as default};
