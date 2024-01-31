@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.5061d337.js";const b=JSON.parse('{"title":"命令行","description":"","frontmatter":{},"headers":[],"relativePath":"guide/cli.md","filePath":"guide/cli.md"}'),o={name:"guide/cli.md"},p=l("",15),e=[p];function t(c,r,i,d,h,y){return a(),n("div",null,e)}const g=s(o,[["render",t]]);export{b as __pageData,g as default};

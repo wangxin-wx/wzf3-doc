@@ -1,1 +1,0 @@
-import{_ as a,o as s,c as l,O as n}from"./chunks/framework.7fa419f1.js";const f=JSON.parse('{"title":"命令行","description":"","frontmatter":{},"headers":[],"relativePath":"guide/cli.md","filePath":"guide/cli.md"}'),e={name:"guide/cli.md"},t=n("",15),o=[t];function c(p,i,r,d,h,y){return s(),l("div",null,o)}const b=a(e,[["render",c]]);export{f as __pageData,b as default};
