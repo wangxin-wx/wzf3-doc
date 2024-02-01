@@ -16,24 +16,30 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.5061d337.js";const u=
 <span class="line"><span style="color:#24292E;">  isc: {</span></span>
 <span class="line"><span style="color:#24292E;">    enabled: </span><span style="color:#005CC5;">false</span><span style="color:#24292E;">,</span></span>
 <span class="line"><span style="color:#24292E;">  },</span></span>
-<span class="line"><span style="color:#24292E;">}</span></span></code></pre></div><p>在部署环境需要修改 <code>mode</code>，可添加环境变量：</p><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#6A737D;">// .dist/ecosystem.config.cjs</span></span>
-<span class="line"><span style="color:#F97583;">const</span><span style="color:#E1E4E8;"> </span><span style="color:#79B8FF;">envs</span><span style="color:#F97583;">=</span><span style="color:#E1E4E8;">{</span></span>
-<span class="line"><span style="color:#E1E4E8;">  </span><span style="color:#9ECBFF;">&quot;PWD&quot;</span><span style="color:#E1E4E8;">: __dirname,</span></span>
-<span class="line"><span style="color:#E1E4E8;">  TRICKD_PUBLIC_TRICKD_MODE: </span><span style="color:#9ECBFF;">&quot;safe&quot;</span><span style="color:#E1E4E8;">,</span></span>
-<span class="line"><span style="color:#E1E4E8;">  </span><span style="color:#F97583;">...</span><span style="color:#E1E4E8;">,</span></span>
+<span class="line"><span style="color:#24292E;">}</span></span></code></pre></div><p>如在部署环境需要修改 <code>mode</code>，可添加环境变量：</p><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#6A737D;">// .dist/ecosystem.config.cjs</span></span>
+<span class="line"><span style="color:#79B8FF;">module</span><span style="color:#E1E4E8;">.</span><span style="color:#79B8FF;">exports</span><span style="color:#E1E4E8;"> </span><span style="color:#F97583;">=</span><span style="color:#E1E4E8;"> {</span></span>
+<span class="line"><span style="color:#E1E4E8;">  apps : [{</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#F97583;">...</span><span style="color:#E1E4E8;">,</span></span>
+<span class="line"><span style="color:#E1E4E8;">    env: {</span></span>
+<span class="line"><span style="color:#E1E4E8;">      NUXT_PUBLIC_TRICKD_MODE: </span><span style="color:#9ECBFF;">&quot;safe&quot;</span><span style="color:#E1E4E8;">,</span></span>
+<span class="line"><span style="color:#E1E4E8;">    }</span></span>
+<span class="line"><span style="color:#E1E4E8;">  }]</span></span>
 <span class="line"><span style="color:#E1E4E8;">}</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#6A737D;">// .dist/ecosystem.config.cjs</span></span>
-<span class="line"><span style="color:#D73A49;">const</span><span style="color:#24292E;"> </span><span style="color:#005CC5;">envs</span><span style="color:#D73A49;">=</span><span style="color:#24292E;">{</span></span>
-<span class="line"><span style="color:#24292E;">  </span><span style="color:#032F62;">&quot;PWD&quot;</span><span style="color:#24292E;">: __dirname,</span></span>
-<span class="line"><span style="color:#24292E;">  TRICKD_PUBLIC_TRICKD_MODE: </span><span style="color:#032F62;">&quot;safe&quot;</span><span style="color:#24292E;">,</span></span>
-<span class="line"><span style="color:#24292E;">  </span><span style="color:#D73A49;">...</span><span style="color:#24292E;">,</span></span>
-<span class="line"><span style="color:#24292E;">}</span></span></code></pre></div><p>变量命名规则：以 <code>TRICKD_PUBLIC_TRICKD_</code> 作为前缀，遇到大写或者子属性时，添加下划线</p><h2 id="serverless网关部署" tabindex="-1">serverless网关部署 <a class="header-anchor" href="#serverless网关部署" aria-label="Permalink to &quot;serverless网关部署&quot;">​</a></h2><h3 id="docker环境" tabindex="-1">docker环境 <a class="header-anchor" href="#docker环境" aria-label="Permalink to &quot;docker环境&quot;">​</a></h3><p>镜像仓库地址：<a href="http://10.120.22.181:8080/repo/tags/trickd-core" target="_blank" rel="noreferrer">http://10.120.22.181:8080/repo/tags/trickd-core</a></p><ol><li>拉取镜像：<code>docker pull 10.120.22.181:5000/trickd-core:0.0.1</code></li><li>部署服务器加载镜像：<code>docker load -i 10.120.22.181:5000/trickd-core:0.0.1</code></li><li>新建<code>docker-compose.yaml</code>文件，参考配置：</li></ol><div class="language-yaml vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">yaml</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#85E89D;">version</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">&quot;3.1&quot;</span></span>
+<span class="line"><span style="color:#005CC5;">module</span><span style="color:#24292E;">.</span><span style="color:#005CC5;">exports</span><span style="color:#24292E;"> </span><span style="color:#D73A49;">=</span><span style="color:#24292E;"> {</span></span>
+<span class="line"><span style="color:#24292E;">  apps : [{</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#D73A49;">...</span><span style="color:#24292E;">,</span></span>
+<span class="line"><span style="color:#24292E;">    env: {</span></span>
+<span class="line"><span style="color:#24292E;">      NUXT_PUBLIC_TRICKD_MODE: </span><span style="color:#032F62;">&quot;safe&quot;</span><span style="color:#24292E;">,</span></span>
+<span class="line"><span style="color:#24292E;">    }</span></span>
+<span class="line"><span style="color:#24292E;">  }]</span></span>
+<span class="line"><span style="color:#24292E;">}</span></span></code></pre></div><p>变量命名规则：以 <code>NUXT_PUBLIC_TRICKD_</code> 作为前缀，遇到大写或者子属性时，添加下划线</p><h2 id="serverless网关部署" tabindex="-1">serverless网关部署 <a class="header-anchor" href="#serverless网关部署" aria-label="Permalink to &quot;serverless网关部署&quot;">​</a></h2><h3 id="docker环境" tabindex="-1">docker环境 <a class="header-anchor" href="#docker环境" aria-label="Permalink to &quot;docker环境&quot;">​</a></h3><p>镜像仓库地址：<a href="http://10.120.22.181:8080/repo/tags/trickd-core" target="_blank" rel="noreferrer">http://10.120.22.181:8080/repo/tags/trickd-core</a></p><ol><li>拉取镜像：<code>docker pull 10.120.22.181:5000/trickd-core:0.0.1</code></li><li>部署服务器加载镜像：<code>docker load -i 10.120.22.181:5000/trickd-core:0.0.1</code></li><li>新建<code>docker-compose.yaml</code>文件，参考配置：</li></ol><div class="language-yaml vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">yaml</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#85E89D;">version</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">&quot;3.1&quot;</span></span>
 <span class="line"><span style="color:#85E89D;">services</span><span style="color:#E1E4E8;">:</span></span>
 <span class="line"><span style="color:#E1E4E8;">  </span><span style="color:#85E89D;">trickd-core</span><span style="color:#E1E4E8;">:</span></span>
 <span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#85E89D;">image</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">10.120.22.181:5000/trickd-core:0.0.1</span></span>
 <span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#85E89D;">container_name</span><span style="color:#E1E4E8;">: </span><span style="color:#9ECBFF;">trickd-core</span></span>
 <span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#85E89D;">environment</span><span style="color:#E1E4E8;">:</span></span>
 <span class="line"><span style="color:#E1E4E8;">      </span><span style="color:#6A737D;"># debug级别日志</span></span>
-<span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">TRICKD0_LOGGER_DEBUG=true</span></span>
+<span class="line"><span style="color:#E1E4E8;">      </span><span style="color:#6A737D;"># - TRICKD0_LOGGER_DEBUG=true</span></span>
 <span class="line"><span style="color:#E1E4E8;">      </span><span style="color:#6A737D;"># 开启密钥验证页面</span></span>
 <span class="line"><span style="color:#E1E4E8;">      - </span><span style="color:#9ECBFF;">TRICKD0_SMPAGE_ENABLE=true</span></span>
 <span class="line"><span style="color:#E1E4E8;">      </span><span style="color:#6A737D;"># - DATABASE_URL=mysql://root:1234abcD@10.120.21.12:13306/trickd</span></span>
@@ -51,7 +57,7 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.5061d337.js";const u=
 <span class="line"><span style="color:#24292E;">    </span><span style="color:#22863A;">container_name</span><span style="color:#24292E;">: </span><span style="color:#032F62;">trickd-core</span></span>
 <span class="line"><span style="color:#24292E;">    </span><span style="color:#22863A;">environment</span><span style="color:#24292E;">:</span></span>
 <span class="line"><span style="color:#24292E;">      </span><span style="color:#6A737D;"># debug级别日志</span></span>
-<span class="line"><span style="color:#24292E;">      - </span><span style="color:#032F62;">TRICKD0_LOGGER_DEBUG=true</span></span>
+<span class="line"><span style="color:#24292E;">      </span><span style="color:#6A737D;"># - TRICKD0_LOGGER_DEBUG=true</span></span>
 <span class="line"><span style="color:#24292E;">      </span><span style="color:#6A737D;"># 开启密钥验证页面</span></span>
 <span class="line"><span style="color:#24292E;">      - </span><span style="color:#032F62;">TRICKD0_SMPAGE_ENABLE=true</span></span>
 <span class="line"><span style="color:#24292E;">      </span><span style="color:#6A737D;"># - DATABASE_URL=mysql://root:1234abcD@10.120.21.12:13306/trickd</span></span>
