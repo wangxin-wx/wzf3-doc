@@ -7,7 +7,7 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.5061d337.js";const h=
 <span class="line"><span style="color:#E1E4E8;">  apps : [{</span></span>
 <span class="line"><span style="color:#E1E4E8;">      </span><span style="color:#F97583;">...</span><span style="color:#E1E4E8;">,</span></span>
 <span class="line"><span style="color:#E1E4E8;">      env: {</span></span>
-<span class="line"><span style="color:#E1E4E8;">        NUXT_PUBLIC_TRICKD_MODE: </span><span style="color:#9ECBFF;">&quot;safe&quot;</span><span style="color:#E1E4E8;">,</span></span>
+<span class="line"><span style="color:#E1E4E8;">        NITRO_PUBLIC_TRICKD_MODE: </span><span style="color:#9ECBFF;">&quot;safe&quot;</span><span style="color:#E1E4E8;">,</span></span>
 <span class="line"><span style="color:#E1E4E8;">      }</span></span>
 <span class="line"><span style="color:#E1E4E8;">    }]</span></span>
 <span class="line"><span style="color:#E1E4E8;">}</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#6A737D;">// ecosystem.config.cjs</span></span>
@@ -15,7 +15,7 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.5061d337.js";const h=
 <span class="line"><span style="color:#24292E;">  apps : [{</span></span>
 <span class="line"><span style="color:#24292E;">      </span><span style="color:#D73A49;">...</span><span style="color:#24292E;">,</span></span>
 <span class="line"><span style="color:#24292E;">      env: {</span></span>
-<span class="line"><span style="color:#24292E;">        NUXT_PUBLIC_TRICKD_MODE: </span><span style="color:#032F62;">&quot;safe&quot;</span><span style="color:#24292E;">,</span></span>
+<span class="line"><span style="color:#24292E;">        NITRO_PUBLIC_TRICKD_MODE: </span><span style="color:#032F62;">&quot;safe&quot;</span><span style="color:#24292E;">,</span></span>
 <span class="line"><span style="color:#24292E;">      }</span></span>
 <span class="line"><span style="color:#24292E;">    }]</span></span>
 <span class="line"><span style="color:#24292E;">}</span></span></code></pre></div><h2 id="性能测试" tabindex="-1">性能测试 <a class="header-anchor" href="#性能测试" aria-label="Permalink to &quot;性能测试&quot;">​</a></h2><ol><li>启动模式配置为 <code>quick</code></li></ol><ul><li>开发环境</li></ul><div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#F97583;">export</span><span style="color:#E1E4E8;"> </span><span style="color:#F97583;">const</span><span style="color:#E1E4E8;"> </span><span style="color:#79B8FF;">trickd</span><span style="color:#F97583;">:</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">ModuleOptions</span><span style="color:#E1E4E8;"> </span><span style="color:#F97583;">=</span><span style="color:#E1E4E8;"> {</span></span>
@@ -27,7 +27,7 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.5061d337.js";const h=
 <span class="line"><span style="color:#E1E4E8;">  apps : [{</span></span>
 <span class="line"><span style="color:#E1E4E8;">      </span><span style="color:#F97583;">...</span><span style="color:#E1E4E8;">,</span></span>
 <span class="line"><span style="color:#E1E4E8;">      env: {</span></span>
-<span class="line"><span style="color:#E1E4E8;">        NUXT_PUBLIC_TRICKD_MODE: </span><span style="color:#9ECBFF;">&quot;quick&quot;</span><span style="color:#E1E4E8;">,</span></span>
+<span class="line"><span style="color:#E1E4E8;">        NITRO_PUBLIC_TRICKD_MODE: </span><span style="color:#9ECBFF;">&quot;quick&quot;</span><span style="color:#E1E4E8;">,</span></span>
 <span class="line"><span style="color:#E1E4E8;">      }</span></span>
 <span class="line"><span style="color:#E1E4E8;">    }]</span></span>
 <span class="line"><span style="color:#E1E4E8;">}</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#6A737D;">// ecosystem.config.cjs</span></span>
@@ -35,7 +35,7 @@ import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.5061d337.js";const h=
 <span class="line"><span style="color:#24292E;">  apps : [{</span></span>
 <span class="line"><span style="color:#24292E;">      </span><span style="color:#D73A49;">...</span><span style="color:#24292E;">,</span></span>
 <span class="line"><span style="color:#24292E;">      env: {</span></span>
-<span class="line"><span style="color:#24292E;">        NUXT_PUBLIC_TRICKD_MODE: </span><span style="color:#032F62;">&quot;quick&quot;</span><span style="color:#24292E;">,</span></span>
+<span class="line"><span style="color:#24292E;">        NITRO_PUBLIC_TRICKD_MODE: </span><span style="color:#032F62;">&quot;quick&quot;</span><span style="color:#24292E;">,</span></span>
 <span class="line"><span style="color:#24292E;">      }</span></span>
 <span class="line"><span style="color:#24292E;">    }]</span></span>
 <span class="line"><span style="color:#24292E;">}</span></span></code></pre></div>`,13),e=[o];function c(t,r,E,i,y,d){return a(),n("div",null,e)}const F=s(p,[["render",c]]);export{h as __pageData,F as default};
