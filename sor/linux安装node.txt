@@ -1,0 +1,17 @@
+下载tar.gz包：
+首先，你需要从Node.js的官方网站或其他可信来源下载对应版本的tar.gz包。确保选择与你的Linux发行版和架构兼容的版本。
+
+解压tar.gz包：
+打开终端，导航到下载tar.gz包的目录。
+使用tar命令解压包。例如：tar -xzvf node-vXX.XX.XX-linux-x64.tar.gz（将XX.XX.XX替换为实际的版本号）。
+
+移动解压后的文件夹：
+解压后，你会得到一个包含Node.js文件和目录的文件夹。你可以将其移动到任何你希望的位置，例如/usr/local/。
+
+设置环境变量：
+为了能够在任何位置运行Node.js和npm（Node.js的包管理器），你需要将Node.js的bin目录添加到你的PATH环境变量中。这可以通过编辑你的bash配置文件（如~/.bashrc或~/.bash_profile）来实现。
+在配置文件中添加以下行（假设你的Node.js安装在/usr/local/node-vXX.XX.XX-linux-x64/）：export PATH=$PATH:/usr/local/node-vXX.XX.XX-linux-x64/bin。
+保存文件后，运行source ~/.bashrc（或对应的配置文件）使更改生效。
+
+验证安装：
+在终端中输入node -v和npm -v来检查Node.js和npm的版本，确认它们是否正确安装并可用。
