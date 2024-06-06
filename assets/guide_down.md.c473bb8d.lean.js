@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as r,Q as t}from"./chunks/framework.5061d337.js";const q=JSON.parse('{"title":"资源下载","description":"","frontmatter":{},"headers":[],"relativePath":"guide/down.md","filePath":"guide/down.md"}'),o={name:"guide/down.md"},i=t("",7),n=[i];function d(h,s,c,l,u,x){return a(),r("div",null,n)}const p=e(o,[["render",d]]);export{q as __pageData,p as default};
