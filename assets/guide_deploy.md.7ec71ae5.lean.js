@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.5061d337.js";const D=JSON.parse('{"title":"部署","description":"","frontmatter":{},"headers":[],"relativePath":"guide/deploy.md","filePath":"guide/deploy.md"}'),p={name:"guide/deploy.md"},o=l("",18),e=[o];function c(t,r,E,i,y,d){return a(),n("div",null,e)}const u=s(p,[["render",c]]);export{D as __pageData,u as default};
